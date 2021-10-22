@@ -11,6 +11,5 @@ if (process.env.ENV === 'production') {
 bootstrap(AppComponent, [
   Title,
   HTTP_PROVIDERS,
-  appRouterProviders
+  appRouterProviders,
 ]).catch(err => console.error(err));
-

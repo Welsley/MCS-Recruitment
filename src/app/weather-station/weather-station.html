@@ -1,2 +1,18 @@
-Weather information will be shown here shortly.<br>
-<b>Current status:</b> {{ status }}
+<div class="title toppads">Weather Station</div>
+<p class="update">Time updated: <span class="normal">{{ status | date:'yyyy-MM-dd hh:mm:ss' }}</span></p>
+<table onload="ngOnInit()">
+    <tr>
+        <th class="normal">Temp (°C)</th>
+        <th class="normal">Humidity (%)</th>
+        <th class="normal">Barometer (hPa)</th>
+        <th class="normal">Wind direction (degrees)</th>
+        <th class="normal">Wind speed (m/s)</th>
+    </tr>
+    <tr>
+        <td class="normal">{{ result[0] }}</td>
+        <td class="normal">{{ result[1] }}</td>
+        <td class="normal">{{ result[2] }}</td>
+        <td class="normal">{{ result[3] }}</td>
+        <td class="normal">{{ result[4] }}</td>
+    </tr>
+</table>
